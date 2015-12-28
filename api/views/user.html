@@ -1,0 +1,109 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+    <title>User data </title>
+    <style>
+    #parent,
+    html,
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        background-image: url("grey.jpg");
+        background-size: 100% 100%;
+    }
+    
+    #heading {
+        height: 200px;
+        color: black;
+        justify-content: center;
+        text-align: center;
+        font-family: serif;
+    }
+    
+    #dashboard {
+        height: 100%;
+        flex: auto;
+        display: flex;
+        flex-direction: row;
+        font-size: 18px;
+    }
+    
+    #subheading {
+        flex: 1;
+        flex-direction: row;
+        display: flex;
+        font-size: 21px;
+    }
+    
+    #newPollHeading {
+        text-align: center;
+        flex: 1;
+        font-family: serif;
+        color: black;
+    }
+    
+    #resultsHeading {
+        text-align: center;
+        flex: 1;
+        font-family: serif;
+        color: black;
+    }
+    
+    #dashboard a {
+        color: black;
+    }
+    
+    #dashboard ul {
+        list-style-type: none;
+    }
+    
+    #newPoll {
+        text-align: center;
+        flex: 1;
+        font-family: serif;
+        color: black;
+    }
+    
+    #results {
+        text-align: center;
+        flex: 1;
+        font-family: serif;
+        color: black;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="heading">
+            <h1>Hi there {{{user}}} , welcome to your voting page</h1>
+        </div>
+        <div id="subheading">
+            {{{message}}}
+            {{{errorMessage}}}
+            <div id="newPollHeading">
+                <h3>New Polls for voting</h3></div>
+            <div id="resultsHeading">
+                <h3>View older results</h3></div>
+        </div>
+        <div id="dashboard">
+            <div id="newPoll">
+                <ul> {{#each polls}}
+                    <li><a href="/poll?month={{this}}">{{this}}</a></li>
+                     {{/each}}
+
+                </ul>
+            </div>
+            <div id="results">
+                <ul> {{#each results}}
+                   <li><a href="/results?month={{this}}">{{this}}</a></li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

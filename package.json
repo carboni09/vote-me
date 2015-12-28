@@ -1,0 +1,26 @@
+{
+  "name": "Test-Node-app",
+  "version": "0.0.1",
+  "author": "Kartik Sharma",
+  "description": "A sample test app",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^3.0.6",
+    "body-parser": "^1.14.1",
+    "compression": "^1.6.0",
+    "connect-flash": "^0.1.1",
+    "consolidate": "^0.13.1",
+    "express": "4.x.x",
+    "express-session": "^1.12.1",
+    "handlebars": "^4.0.5",
+    "mongoose": "^4.2.10",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.0.0",
+    "passport-google": "^0.3.0",
+    "passport-google-oauth": "^0.2.0",
+    "passport-local": "^1.0.0",
+    "passport-twitter": "^1.0.3",
+    "path": "^0.12.7"
+  },
+  "license": "MIT"
+}

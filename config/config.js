@@ -1,0 +1,41 @@
+module.exports={
+	development:{
+       db:'mongodb://localhost:27017/test',
+       port:3000,
+       google:{
+       	scope:['https://www.googleapis.com/auth/plus.login', 'https://www.googleapis.com/auth/plus.profile.emails.read'],
+       	clientID:"",
+       	clientSecret:"",
+            callbackURL:""
+       },
+       facebook:{
+       	clientID:"",
+       	clientSecret:"",
+            callbackURL:""
+       },
+       twitter:{
+       	clientID:"",
+       	clientSecret:"",
+       	callbackURL:""
+       }
+	},
+	production:{
+      db:'',
+      port:'',
+      google:{
+       	scope:[],
+       	clientID:'',
+       	clientSecret:'',
+            callbackURL:''
+       },
+       facebook:{
+       	clientID:'',
+       	clientSecret:''
+       },
+       twitter:{
+       	clientID:'',
+       	clientSecret:'',
+       	callbackURL:''
+       }
+	}
+};

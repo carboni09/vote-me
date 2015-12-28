@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login page </title>
+    <style>
+        html,body,#parent{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background-image: url("grey.jpg");
+            background-size: 100% 100%;
+            padding: 0px;
+            margin: 0px;
+            
+        }
+        #heading{
+            flex:1;
+            font-size: 40px;
+            text-align: center;
+            padding: 80px;
+        }
+        #loginForm{
+            flex:1;
+            justify-content: center;
+            font-size: 18px;
+            
+        }
+        #loginForm form{
+           float:right;
+        }
+        #socialLogin{
+            flex:1;
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            
+        }
+        #socialLogin a{
+            color:black;
+            font-size: 20px;
+        }
+        #google{
+            
+            flex:1;
+        }
+        #facebook{
+            flex: 1;
+        }
+        #twitter{
+            flex: 1;
+        }
+    
+    </style>
+</head>
+<body>
+<div id="parent">
+<div id="heading">
+Vote Me 
+</div>    
+{{{message}}}    
+<div id ="loginForm"><form action="/login" method="POST">
+    <table>
+        <tr>
+            <td>Username :</td>
+            <td><input type="text" name="username" required></td>
+        </tr>
+        <tr>
+            <td>Password :</td>
+            <td><input type="password" name="password" required></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit">login</button></td>
+        </tr>
+    </table>
+	
+    
+    
+</form></div>
+<div id="socialLogin">
+<div id="google"><a href="/login/google"> Login with google </a></div>
+<div id="facebook"><a href="/login/facebook"> Login with Facebook </a></div>
+<div id="twitter"><a href="/login/twitter"> Login with Twitter </a></div>
+</div>    
+</div>    
+
+</body>
+</html>

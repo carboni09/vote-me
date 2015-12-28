@@ -1,0 +1,57 @@
+<html>
+<head>
+    <style>
+        body{
+            padding: 150px;
+            background-color: #fcfcfc;
+            background-image: url("grey.jpg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+           
+        }
+        #outer{
+            margin: 0 auto;
+            padding: 100px;
+            
+        }   
+    #votingForm{
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
+  border-radius: 3px;
+  font-family: cursive;
+
+       
+        }
+        #votingForm form button{
+  font-family: cursive;
+        }    
+        
+    </style>
+</head>
+    <body>
+   
+    <div id ="votingForm">
+   <h3> poll  for {{{month}}}comes here </h3>  
+       <form action="/vote" method="POST">
+        <table>
+        <input type="hidden" name="month" value={{{month}}}>
+        <tr>
+            <td> Venue:</td>
+            <td><input type="text" name="venue"required></td>
+        </tr>
+            <tr>
+            <td>Date :</td>
+            <td><input type="date" name="date" required></td>
+        </tr>
+        <tr><td></td>
+            <td><button value="submit">Submit</button></td>
+        </tr>
+        </table>
+        
+        </form>
+    
+        </div>
+    </body>
+
+</html>

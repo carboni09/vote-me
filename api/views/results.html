@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Results</title>
+</head>
+
+<body>
+    <table>
+        <th>venue</th>
+        <th>date</th>
+        <th>votes</th>
+        {{#each results}}
+        <tr>
+            <td>
+                {{this.venue}}
+            </td>
+            <td>
+                {{this.date}}
+            </td>
+            <td>
+                {{this.users.length}}
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</body>
+
+</html>
