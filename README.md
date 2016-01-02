@@ -1,2 +1,2 @@
-# sample-node-app
-a sample node js app using express,passport ,mongoose and promises 
+# vote-me
+A voting application created in node js using express,passport ,mongoose and promises
